@@ -1,7 +1,21 @@
 /* Skills Section Styles */
 .skills {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #334155 0%, #475569 25%, #64748b 50%, #94a3b8 75%, #cbd5e1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 40% 60%, rgba(71, 85, 105, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 60% 40%, rgba(100, 116, 139, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .skills h2 {
@@ -9,14 +23,24 @@
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #e5e7eb;
+  position: relative;
+  z-index: 1;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-category {
@@ -42,18 +66,48 @@
   text-align: center;
 }
 
-.skill-category ul {
-  list-style: none;
-  padding: 0;
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.skill-category li {
-  padding: 0.5rem 0;
-  color: #cbd5e1;
-  font-size: 1.1rem;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.skill-category li:last-child {
-  border-bottom: none;
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill-percentage {
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease-in-out;
+  background: linear-gradient(90deg, currentColor 0%, rgba(255, 255, 255, 0.2) 100%);
 }

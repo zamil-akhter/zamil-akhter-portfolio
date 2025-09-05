@@ -1,7 +1,21 @@
 /* Experience Section Styles */
 .experience {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
+  background: linear-gradient(135deg, #64748b 0%, #94a3b8 25%, #cbd5e1 50%, #e2e8f0 75%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 35% 65%, rgba(71, 85, 105, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 65% 35%, rgba(100, 116, 139, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .experience h2 {
@@ -9,12 +23,15 @@
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #e5e7eb;
+  position: relative;
+  z-index: 1;
 }
 
 .timeline {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .timeline::before {
@@ -24,20 +41,27 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(180deg, #475569 0%, #64748b 50%, #94a3b8 100%);
   transform: translateX(-50%);
 }
 
 .timeline-item {
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(71, 85, 105, 0.2);
   padding: 2rem;
   margin: 2rem 0;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   position: relative;
   width: 45%;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  border-color: rgba(71, 85, 105, 0.4);
+  box-shadow: 0 12px 40px rgba(71, 85, 105, 0.2);
+  transform: translateY(-2px);
 }
 
 .timeline-item:nth-child(odd) {
@@ -53,10 +77,10 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
   border-radius: 50%;
   top: 2rem;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 20px rgba(71, 85, 105, 0.5);
 }
 
 .timeline-item:nth-child(odd)::before {
@@ -76,7 +100,7 @@
 .timeline-item h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #10b981;
+  color: #64748b;
 }
 
 .timeline-item .date {
