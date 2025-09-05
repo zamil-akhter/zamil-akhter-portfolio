@@ -7,8 +7,8 @@ function Hero() {
       <h1>Zamil Akhter</h1>
       <h3>Software Developer</h3>
       <p>
-        Software developer dedicated to building user-focused, 
-        high-performance applications using Python, React, and modern web technologies.
+      Backend-focused software developer skilled in NestJS, MongoDB, and real-time systems (Socket.IO, WebRTC). 
+      Experienced in building scalable APIs and secure authentication, with a focus on performance, reliability, and user experience.
       </p>
     </div>
   );

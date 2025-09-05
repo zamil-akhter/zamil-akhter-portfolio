@@ -1,37 +1,58 @@
 /* Experience Section Styles */
 .experience {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #64748b 0%, #94a3b8 25%, #cbd5e1 50%, #e2e8f0 75%, #f1f5f9 100%);
+  background: #101421;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
-.experience::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 35% 65%, rgba(71, 85, 105, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 65% 35%, rgba(100, 116, 139, 0.08) 0%, transparent 50%);
-  pointer-events: none;
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .experience h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #e5e7eb;
-  position: relative;
-  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.experience-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.download-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
 .timeline {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  padding: 2rem 0;
 }
 
 .timeline::before {
@@ -41,75 +62,149 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #475569 0%, #64748b 50%, #94a3b8 100%);
+  background: #64748b;
+  z-index: 1;
   transform: translateX(-50%);
 }
 
 .timeline-item {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(71, 85, 105, 0.2);
-  padding: 2rem;
-  margin: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   position: relative;
-  width: 45%;
-  transition: all 0.3s ease;
-}
-
-.timeline-item:hover {
-  border-color: rgba(71, 85, 105, 0.4);
-  box-shadow: 0 12px 40px rgba(71, 85, 105, 0.2);
-  transform: translateY(-2px);
-}
-
-.timeline-item:nth-child(odd) {
-  margin-left: 0;
-}
-
-.timeline-item:nth-child(even) {
-  margin-left: 55%;
+  margin-bottom: 4rem;
+  width: 100%;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
-  border-radius: 50%;
+  left: 50%;
   top: 2rem;
-  box-shadow: 0 0 20px rgba(71, 85, 105, 0.5);
+  width: 18px;
+  height: 18px;
+  background: #3b82f6;
+  border-radius: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px #101421, 0 0 0 6px #3b82f6;
 }
 
-.timeline-item:nth-child(odd)::before {
-  right: -10px;
+.timeline-item.left {
+  padding-right: calc(50% + 2rem);
 }
 
-.timeline-item:nth-child(even)::before {
-  left: -10px;
+.timeline-item.right {
+  padding-left: calc(50% + 2rem);
+  margin-top: 2rem;
 }
 
-.timeline-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #e5e7eb;
+.timeline-content {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
-.timeline-item h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #64748b;
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: #475569;
 }
 
-.timeline-item .date {
-  font-weight: bold;
-  color: #cbd5e1;
+.timeline-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.timeline-item p {
+.timeline-date svg {
+  color: #64748b;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.location svg {
+  color: #64748b;
+}
+
+.description {
   color: #cbd5e1;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.achievements li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+  
+  .timeline-item::before {
+    left: 11px;
+    transform: none;
+  }
+  
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+  
+  .timeline-content {
+    margin-left: 0;
+  }
+  
+  .experience h2 {
+    font-size: 2.5rem;
+  }
 }
