@@ -1,0 +1,45 @@
+/* Home Section Styles */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f4c3a 0%, #1a5f4a 25%, #2d5a4e 50%, #1e3a8a 75%, #1e40af 100%);
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 4px solid white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+/* About Section Styles */
+.about {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #e5e7eb;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,0 +1,91 @@
+/* Experience Section Styles */
+.experience {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #e5e7eb;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 55%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  top: 2rem;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #10b981;
+}
+
+.timeline-item .date {
+  font-weight: bold;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.timeline-item p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
