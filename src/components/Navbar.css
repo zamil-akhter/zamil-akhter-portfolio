@@ -170,3 +170,26 @@
     box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.4);
   }
 }
+
+
+/* Default logo styles */
+.logo-text {
+  display: inline;
+}
+
+.logo-short {
+  display: none;
+}
+
+/* Mobile: when scrolled, show short version */
+@media (max-width: 768px) {
+  .logo-text.scrolled {
+    display: none;
+  }
+  .logo-short.scrolled {
+    display: inline;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #e5e7eb;
+  }
+}

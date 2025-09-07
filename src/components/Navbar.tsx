@@ -4,12 +4,14 @@ import "./Navbar.css";
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "skills", "projects", "experience", "contact"];
       const scrollPosition = window.scrollY + 100;
 
+      // Highlight active section
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -20,6 +22,9 @@ function Navbar() {
           }
         }
       }
+
+      // Toggle logo shrink when scrolling
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +44,15 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="#home">Zamil Akhter</a>
+          <a href="#home">
+            {/* Show full name on desktop, switch to ZA on mobile + scroll */}
+            <span className={`logo-text ${isScrolled ? "scrolled" : ""}`}>
+              Zamil Akhter
+            </span>
+            <span className={`logo-short ${isScrolled ? "scrolled" : ""}`}>
+              ZA
+            </span>
+          </a>
         </div>
 
         {/* Hamburger */}
@@ -58,7 +71,7 @@ function Navbar() {
                 className={`nav-link ${activeSection === item.id ? "active" : ""}`}
                 onClick={() => {
                   setActiveSection(item.id);
-                  setIsOpen(false); // close menu after clicking
+                  setIsOpen(false);
                 }}
               >
                 {item.label}
