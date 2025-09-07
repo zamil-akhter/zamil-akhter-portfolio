@@ -1,7 +1,7 @@
 /* Experience Section Styles */
 .experience {
   padding: 5rem 0;
-  background: #101421;
+  background: var(--color-bg);
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -19,6 +19,9 @@
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 1rem;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .experience-subtitle {
@@ -84,7 +87,7 @@
   border-radius: 50%;
   z-index: 2;
   transform: translateX(-50%);
-  box-shadow: 0 0 0 4px #101421, 0 0 0 6px #3b82f6;
+  box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px #3b82f6;
 }
 
 .timeline-item.left {

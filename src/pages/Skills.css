@@ -1,7 +1,7 @@
 /* Skills Section Styles */
 .skills {
   padding: 5rem 0;
-  background: #101421;
+  background: var(--color-bg);
   position: relative;
   overflow: hidden;
 }

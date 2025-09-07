@@ -1,7 +1,7 @@
 /* Projects Section Styles */
 .projects {
   padding: 5rem 0;
-  background: #101421;
+  background: var(--color-bg);
   position: relative;
   overflow: hidden;
 }

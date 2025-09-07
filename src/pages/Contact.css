@@ -1,7 +1,7 @@
 /* General Contact Section */
 .contact {
   padding: 5rem 0;
-  background: #101421; /* Dark background like screenshot */
+  background: var(--color-bg); /* Dark background like screenshot */
   color: #e5e7eb;
 }
 
@@ -115,7 +115,7 @@
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
-  background: rgba(15, 23, 42, 0.8);
+  background:var(--color-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   font-size: 1rem;
