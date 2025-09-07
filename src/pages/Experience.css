@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.experience h2 {
+.experience h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
@@ -100,8 +100,8 @@
 }
 
 .timeline-content {
-  background: #1e293b;
-  border: 1px solid #334155;
+  background: var(--color-content);
+  border: 1px solid var(--color-content-border);
   border-radius: 12px;
   padding: 2rem;
   position: relative;

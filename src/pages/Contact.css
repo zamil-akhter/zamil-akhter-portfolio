@@ -50,7 +50,7 @@
 .info-card {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-content);;
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -98,7 +98,7 @@
 
 /* Right Form Section */
 .contact-form {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-content);
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);

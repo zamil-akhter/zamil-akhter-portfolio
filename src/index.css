@@ -18,8 +18,9 @@
   /* Colors (Reusable) */
   --color-text: #e5e7eb;
   --color-bg:   #101421;
-  --color-primary: #10b981;
-  --color-primary-hover: #059669;
+  --color-content: #FFFFFF0D;
+  --color-content-border: #334155;
+  --color-content-hover: #FFFFFF1A; /*#FFFFFF26*/
   --color-secondary: #3b82f6;
   --color-accent: #f59e0b;
   --color-danger: #ef4444;

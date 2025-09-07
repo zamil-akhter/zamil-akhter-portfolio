@@ -5,7 +5,7 @@ function Experience() {
     <section id="experience" className="experience">
       <div className="container">
         <div className="experience-header">
-          <h2>Experience</h2>
+          <h1>Experience</h1>
           <p className="experience-subtitle">My professional journey and key achievements</p>
           <button className="download-cv-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

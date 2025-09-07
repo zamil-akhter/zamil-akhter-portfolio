@@ -18,13 +18,16 @@
   pointer-events: none;
 }
 
-.skills h2 {
+.skills h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #e5e7eb;
   position: relative;
   z-index: 1;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .skills-grid {
@@ -44,9 +47,9 @@
 }
 
 .skill-category {
-  background: rgba(15, 23, 42, 0.8);
+  background: var(--color-content);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid var(--color-content-border);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -54,9 +57,9 @@
 }
 
 .skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
-  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-content-border);;
+  border-color: var(--color-content-border);;
 }
 
 .skill-category h3 {

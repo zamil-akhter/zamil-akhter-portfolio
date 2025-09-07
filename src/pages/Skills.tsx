@@ -59,7 +59,8 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2>Skills</h2>
+        <h1>Skills & Expertise</h1>
+        <p>A comprehensive toolkit for building modern digital experiences</p>
         <div className="skills-grid">
           <SkillCard title="Backend" skills={backendSkills} />
           <SkillCard title="Databases & Caching" skills={databaseSkills} />
