@@ -19,41 +19,98 @@
 }
 
 .nav-logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #e5e7eb;
+  font-size: 2rem;              /* bigger logo */
+  font-weight: 800;             /* bold */
   text-decoration: none;
-  transition: color 0.3s ease;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;    /* smooth hover */
+  position: relative;
 }
+.nav-logo a {
+  font-size: 2rem;              
+  font-weight: 800;
+  text-decoration: none;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.nav-logo a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
 .nav-logo a:hover {
-  color: #64748b;
+  transform: scale(1.08);  /* smooth zoom, no flicker */
 }
+
+.nav-logo a:hover::after {
+  width: 100%; /* underline expands */
+}
+
+
 
 /* Desktop menu */
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 1.5rem; /* more breathing space */
   transition: all 0.3s ease;
 }
+
 .nav-link {
-  color: #9ca3af;
+  position: relative;
+  color: #cbd5e1; /* softer gray-blue */
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
   transition: all 0.3s ease;
 }
-.nav-link:hover {
-  color: #e5e7eb;
+
+/* Underline effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(147, 51, 234, 0.08); /* soft gradient tint */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link:hover::after {
+  width: 70%; /* animated underline */
+}
+
 .nav-link.active {
-  background: linear-gradient(90deg, #475569 0%, #64748b 100%);
+  background: linear-gradient(90deg, #9333ea, #3b82f6);
   color: #ffffff;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(71, 85, 105, 0.3);
 }
+
 
 /* Hamburger (hidden on desktop) */
 .hamburger {

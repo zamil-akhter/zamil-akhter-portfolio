@@ -29,15 +29,43 @@
 .about h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #e5e7eb;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
 }
 
-.about p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #cbd5e1;
-  max-width: 800px;
-  margin: 0 auto;
+.about .subtitle {
   text-align: center;
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1.1rem;
 }
