@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +35,11 @@ function Navbar() {
     { id: "contact", label: "Contact" },
   ];
 
+  const handleLinkClick = (id) => {
+    setActiveSection(id);
+    setMenuOpen(false); // close menu on click (mobile)
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -43,24 +48,17 @@ function Navbar() {
         </div>
 
         {/* Hamburger */}
-        <button className={`hamburger ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+        <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
 
-        {/* Nav Links */}
-        <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
+        {/* Menu */}
+        <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
           {navItems.map((item) => (
             <li key={item.id} className="nav-item">
-              <a
-                href={`#${item.id}`}
-                className={`nav-link ${activeSection === item.id ? "active" : ""}`}
-                onClick={() => {
-                  setActiveSection(item.id);
-                  setIsOpen(false); // close menu after clicking
-                }}
-              >
+              <a href={`#${item.id}`} className={`nav-link ${activeSection === item.id ? "active" : ""}`} onClick={() => handleLinkClick(item.id)}>
                 {item.label}
               </a>
             </li>

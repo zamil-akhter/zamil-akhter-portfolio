@@ -30,6 +30,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.skills p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

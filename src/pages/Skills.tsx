@@ -53,7 +53,6 @@ function Skills() {
     { name: "Git & GitHub", percentage: 95, color: "#F1502F" },
     { name: "Linux", percentage: 80, color: "#FCC624" },
     { name: "VS Code", percentage: 95, color: "#007ACC" },
-
   ];
 
   return (
