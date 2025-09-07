@@ -17,16 +17,10 @@ function About() {
           </div>
           <div className="about-text">
             <p>
-              I am a passionate full stack developer with almost two years of experience
-              bringing ideas to life through modern, high-performance web applications.
-              I love working with React.js and Next.js on the frontend, and Python, Django,
-              DRF, and FastAPI on the backend to create smooth, reliable experiences.
+              I am a backend-focused software developer with nearly two years of professional experience delivering scalable, high-performance web applications. I specialize in NestJS and MongoDB, with strong expertise in real-time communication using Socket.IO and WebRTC.
             </p>
             <p>
-              I enjoy solving problems and turning concepts into scalable, real-world
-              solutions. Along the way, I have gained strong skills in AWS and API
-              integrations. For me, creating software is not just coding, it’s building
-              meaningful digital experiences.
+              I excel at building robust APIs, secure authentication systems, and seamless integrations such as Stripe and Firebase notifications. I thrive on turning complex ideas into efficient, production-ready solutions, ensuring smooth and reliable user experiences. For me, software development is not just coding—it’s crafting meaningful and impactful digital products.
             </p>
           </div>
         </div>
