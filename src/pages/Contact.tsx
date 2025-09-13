@@ -22,7 +22,7 @@ function Contact() {
     setStatus("");
 
     try {
-      const response = await fetch("https://zamil-akhter-portfolio-backend-3n8zwvwnu.vercel.app/send-email", {
+      const response = await fetch("https://zamil-akhter-portfolio-backend.vercel.app/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
