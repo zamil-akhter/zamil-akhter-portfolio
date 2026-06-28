@@ -27,7 +27,7 @@ function Experience() {
                 </svg>
                 Jan 2025 – Present
               </div>
-              <h3>Backend Developer</h3>
+              <h3>Software Developer</h3>
               <h4>Sunfocus Solutions Pvt. Ltd.</h4>
               <div className="location">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,16 +55,16 @@ function Experience() {
                   <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2" />
                   <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2" />
                 </svg>
-                July 2024 – Dec 2024
+                Nov 2021 – Apr 2023
               </div>
-              <h3>NodeJS Intern</h3>
-              <h4>Sunfocus Solutions Pvt. Ltd.</h4>
+              <h3>Software Developer</h3>
+              <h4>Trempplin Infotech</h4>
               <div className="location">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2" />
                   <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
                 </svg>
-                Chandigarh, India
+                Bengaluru, India
               </div>
               <p className="description">Contributed to the development of a social media platform, focusing on real-world problem-solving and full-stack development.</p>
               <ul className="achievements">
